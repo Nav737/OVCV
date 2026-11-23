@@ -1,0 +1,22 @@
+metric,value,status
+CUSIP,32076VAE3,contractual identifier
+valuation_date,2026-11-20,chosen to align with last verified share close
+underlying_spot_USD,10.9100,public close on 2026-11-20
+maturity_years_ACT365,4.15616438,date calculation
+conversion_price_calculated,22.360010,1000 / 44.7227; indenture says approximately 22.36
+spot_to_conversion_price,48.7925%,below conversion price at spot reference
+accrued_interest_per_1000,0.434028,30/360 approximation from 2026-07-15
+risky_JD_dirty_value_per_1000,772.531939,ILLUSTRATIVE market inputs only
+risky_JD_clean_value_per_1000,772.097911,dirty value less accrued interest
+risky_JD_dirty_value_per_100,77.253194,same value scaled to per-100 par convention
+riskless_BS_dirty_value_per_1000,992.952998,ILLUSTRATIVE market inputs only
+riskless_BS_clean_value_per_1000,992.518970,dirty value less accrued interest
+riskless_BS_dirty_value_per_100,99.295300,same value scaled to per-100 par convention
+riskless_minus_risky_dirty,220.421060,model-based risky/riskless gap; not an accounting CVA
+bond_recovery_cash_floor,400.000000,"per $1,000 principal using illustrative bond recovery"
+JTD_adjusted_conversion_payoff_at_spot,195.169863,"per $1,000 principal using illustrative JTD factor"
+spot_where_JTD_conversion_payoff_equals_bond_recovery,22.360010,illustrative threshold at baseline recovery and JTD
+CDS_recovery,0.4,illustrative placeholder
+bond_recovery,0.4,illustrative placeholder
+JTD_factor,0.6,illustrative placeholder
+market_clean_price,,not supplied; OAS solve skipped

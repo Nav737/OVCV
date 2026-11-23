@@ -1,0 +1,1 @@
+OAS was not solved because market_clean_price_per_1000 is null. Enter the observed Bloomberg clean price in bond_32076vae3_config.json. The example converts it to dirty price using accrued interest and solves OAS in the paper's Black-Scholes convention.

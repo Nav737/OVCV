@@ -1,0 +1,28 @@
+input_group,parameter,node_tenor_years,strike_or_moneyness,value,unit,bloomberg_source_or_field,source_date_time,status,notes
+Security,Market clean price,,,,USD per 1000,OVCV / market quote,,,REQUIRED for OAS solve,Use the same valuation and settlement conventions as the model
+Equity,AG spot,,,,USD per share,AG US Equity,,,REPLACE,Use spot as of valuation snapshot; example has 10.91 on 2026-11-20
+Risk-free,SOFR instantaneous forward,0,,,decimal,SOFR curve / BRM curve mapping,,,REPLACE,Use instantaneous forwards or transform consistently
+Risk-free,SOFR instantaneous forward,0.5,,,decimal,SOFR curve / BRM curve mapping,,,REPLACE,
+Risk-free,SOFR instantaneous forward,1,,,decimal,SOFR curve / BRM curve mapping,,,REPLACE,
+Risk-free,SOFR instantaneous forward,2,,,decimal,SOFR curve / BRM curve mapping,,,REPLACE,
+Risk-free,SOFR instantaneous forward,3,,,decimal,SOFR curve / BRM curve mapping,,,REPLACE,
+Risk-free,SOFR instantaneous forward,4,,,decimal,SOFR curve / BRM curve mapping,,,REPLACE,
+Dividend,Dividend forward,0,,,decimal,Equity forward / dividend curve,,,REPLACE,
+Dividend,Dividend forward,1,,,decimal,Equity forward / dividend curve,,,REPLACE,
+Dividend,Dividend forward,2,,,decimal,Equity forward / dividend curve,,,REPLACE,
+Dividend,Dividend forward,3,,,decimal,Equity forward / dividend curve,,,REPLACE,
+Dividend,Dividend forward,4,,,decimal,Equity forward / dividend curve,,,REPLACE,
+OVDV,Black-Scholes implied volatility,0.5,ATM,,,decimal,OVDV surface,,,REPLACE,Replace ATM illustration with actual strike or moneyness convention used in OVCV calibration
+OVDV,Black-Scholes implied volatility,1,ATM,,,decimal,OVDV surface,,,REPLACE,
+OVDV,Black-Scholes implied volatility,2,ATM,,,decimal,OVDV surface,,,REPLACE,
+OVDV,Black-Scholes implied volatility,3,ATM,,,decimal,OVDV surface,,,REPLACE,
+OVDV,Black-Scholes implied volatility,4,ATM,,,decimal,OVDV surface,,,REPLACE,
+Credit,CDS par spread,1,,,bps,Issuer CDS curve / selected proxy,,,REPLACE,Record reference entity, seniority, currency, restructuring clause and curve identifier
+Credit,CDS par spread,3,,,bps,Issuer CDS curve / selected proxy,,,REPLACE,
+Credit,CDS par spread,5,,,bps,Issuer CDS curve / selected proxy,,,REPLACE,
+Model,Bond recovery rate,,,,decimal,OVCV configuration,,,VERIFY,Separate from CDS recovery
+Model,CDS recovery rate,,,,decimal,CDS curve calibration / OVCV configuration,,,VERIFY,Changing recovery with CDS spreads fixed requires hazard recalibration
+Model,Jump-to-default factor,,,,decimal,OVCV configuration,,,VERIFY,Verify whether field is stock loss fraction or retained stock fraction
+Model,E2C exponent,,,,decimal,OVCV configuration,,,VERIFY,Check whether E2C is enabled and how the base hazard is normalized
+Model,Pricing model,,,,text,OVCV configuration,,,VERIFY,Jump-Diffusion / Black-Scholes
+Model,Risky / riskless setting,,,,text,OVCV configuration,,,VERIFY,Record the exact Terminal toggle / methodology
